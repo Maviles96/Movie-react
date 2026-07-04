@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from "react-router-dom";
+import MovieList from "./MovieList"; 
 
 function DataComponent() {
     const [data, setData] = useState([]);
@@ -9,7 +10,7 @@ function DataComponent() {
     const query = searchParams.get("query") || "marvel";
 
      useEffect(() => {
-    fetch(`https://www.omdbapi.com/?s=${query}l&apikey=d7d0b17d`)
+    fetch(`https://www.omdbapi.com/?s=${query}&apikey=d7d0b17d`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -33,11 +34,7 @@ function DataComponent() {
     <div>
         <h2>Movie Results</h2>
         <ul>
-            {data.map((post) => (
-             <li key={post.imdbID}>
-                <strong>{post.Title}</strong>
-             </li>   
-            ))}
+            <MovieList movies={data} /> 
         </ul>
     </div>
  );  

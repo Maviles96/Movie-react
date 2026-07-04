@@ -1,0 +1,61 @@
+.movie-card {
+    width: 280px;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: sans-serif;
+  color: #ffffff;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.movie-poster-wrapper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-type {
+     position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(229, 9, 20, 0.85); /* Netflix-style red */
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.movie-details {
+    padding: 16px;
+}
+
+.movie-title {
+    margin: 0 0 6px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-year {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #aaaaaa;
+}
+

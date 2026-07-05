@@ -1,4 +1,5 @@
 import React from "react";
+import MovieCard from "./MovieCard";
 
 const MovieList = ({ movies }) => {
     return (
@@ -6,9 +7,7 @@ const MovieList = ({ movies }) => {
       {movies?.length > 0 ? (
         <div className="movies-grid">
           {movies.map((movie) => (
-           <div key={movie.imdbID}>
-           <h3>{movie.Title}</h3>
-           </div>
+           <MovieCard key={movie.imdbID} movie={movie} />
           ))}
         </div>
       ) : (

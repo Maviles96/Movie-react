@@ -2,7 +2,7 @@ import React from "react";
 import './MovieCard.css';
 
 const MovieCard = ({ movie }) => {
-  const posterUrl = movie.Poster !== 'N/A' ? movie.Poster : 'https://images.wallpapersden.com/image/download/marvel-studios-hd-all-posters_bWxsaGqUmZqaraWkpJRmbmdlrWZlbWU.jpg';
+  const posterUrl = movie.Poster !== 'N/A' ? movie.Poster : '/Marvels.jpg';
 
   return (
     <div className="movie-card">

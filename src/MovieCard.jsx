@@ -7,7 +7,14 @@ const MovieCard = ({ movie }) => {
   return (
     <div className="movie-card">
       <div className="movie-poster-wrapper">
-        <img className="movie-poster" src={posterUrl} alt={movie.Title} />
+       <img
+  className="movie-poster"
+  src={posterUrl}
+  alt={movie.Title}
+  onError={(event) => {
+    event.currentTarget.src = "/Marvels.jpg";
+  }}
+ />
         <span className="movie-type">{movie.Type}</span>
       </div>
       <div className="movie-details">

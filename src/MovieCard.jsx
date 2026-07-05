@@ -1,5 +1,4 @@
 import React from "react";
-import './MovieCard.css';
 
 const MovieCard = ({ movie }) => {
   const posterUrl = movie.Poster !== 'N/A' ? movie.Poster : '/Marvels.jpg';

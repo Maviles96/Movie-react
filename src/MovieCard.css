@@ -66,3 +66,15 @@
   justify-content: center;
   width: 100%;
 }
+
+.gridContainer {
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}

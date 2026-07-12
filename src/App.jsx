@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import SearchResults from "./SearchResults";
 import "./App.css";
+import Navbar from "./src/Navbar";
+import Footer from "./src/src/Footer";
 
 function SearchBar() {
   const [query, setQuery] = useState("");
@@ -31,10 +33,15 @@ function SearchBar() {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<SearchBar />} />
-      <Route path="/search" element={<SearchResults />} />
-    </Routes>
+    <>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<SearchBar />} />
+        <Route path="/search" element={<SearchResults />} />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
